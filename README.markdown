@@ -345,7 +345,7 @@ All the required third-party cookbooks will be automatically installed via the
 locally (eg. to inspect them), use the `berks` command:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~bash
-    berks install --path ./tmp/cookbooks
+    berks vendor  ./tmp/cookbooks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `Vagrantfile` supports four Linux distributions:
