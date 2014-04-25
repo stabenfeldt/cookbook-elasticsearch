@@ -17,6 +17,7 @@
 
 require 'json'
 
+
 # Lifted from <https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/hash/deep_merge.rb>
 #
 class Hash
@@ -179,7 +180,9 @@ Vagrant::Config.run do |config|
       #
       if Vagrant::VERSION < '1.1'
         box_config.vm.customize ["modifyvm", :id, "--memory", 512]
+        STDERR.puts ' < 1.1'
       else
+        STDERR.puts "Crashing with version: #{Vagrant::VERSION}"
         config.vm.provider :virtualbox do |vb|
           vb.customize ["modifyvm", :id, "--memory", 512]
         end
